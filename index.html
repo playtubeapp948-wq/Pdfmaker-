@@ -18,10 +18,31 @@ nav a:first-child{background:rgba(255,255,255,.2)}
 .hero{padding:28px 18px 8px;max-width:760px;margin:auto}
 .hero h2{font-size:34px;line-height:1.15}
 .hero h2 span{color:var(--red);font-size:44px;display:block}
+.title-row{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.me{width:110px;height:110px;border-radius:50%;object-fit:cover;flex-shrink:0;box-shadow:0 4px 14px rgba(91,33,182,.35)}
+@media(max-width:380px){.me{width:84px;height:84px}.hero h2{font-size:28px}.hero h2 span{font-size:36px}}
 .hero p{margin:12px 0;font-size:17px}
 .hero ul{list-style:none}
 .hero li{padding:5px 0 5px 30px;position:relative;font-size:16px}
 .hero li:before{content:"✓";position:absolute;left:0;top:5px;width:22px;height:22px;border-radius:50%;background:var(--green);color:#fff;font-size:14px;display:grid;place-items:center}
+.phone-wrap{display:flex;justify-content:center;padding:26px 14px 6px;background:radial-gradient(circle at 50% 60%,#ddd0ff,transparent 70%)}
+.phone{width:240px;background:#111;border-radius:34px;padding:9px;box-shadow:0 18px 40px rgba(91,33,182,.4);transform:rotate(-4deg)}
+.screen{background:#fff;border-radius:26px;overflow:hidden;font-size:12px}
+.status{background:var(--red);color:#fff;display:flex;justify-content:space-between;padding:6px 14px 0;font-size:10px}
+.appbar{background:var(--red);color:#fff;padding:6px 14px 10px;display:flex;justify-content:space-between;align-items:center;font-weight:700;font-size:14px}
+.banner{background:var(--red);color:#fff;margin:0 10px 10px;border-radius:12px;padding:12px;font-weight:700;font-size:13px;display:flex;justify-content:space-between;align-items:center;gap:6px}
+.banner i{font-style:normal;background:#fff;color:var(--red);padding:8px 6px;border-radius:6px;font-size:10px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:0 10px}
+.grid2 div{background:#f6f4fb;border-radius:12px;padding:12px 6px;text-align:center;font-weight:600;font-size:12px}
+.grid2 em{display:block;font-style:normal;font-size:24px;margin-bottom:2px}
+.tools-t{padding:10px 12px 4px;font-weight:700;font-size:12px}
+.tools{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;padding:0 8px 10px;text-align:center;font-size:10px}
+.tools em{display:block;font-style:normal;font-size:18px}
+.tabs{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid #eee;padding:8px 4px;text-align:center;font-size:9px;color:#666}
+.tabs b{color:var(--red)}
+.badge{position:absolute;right:-6px;top:30px;width:96px;height:96px;border-radius:50%;background:radial-gradient(#fde047,#f59e0b);color:#3b2a00;display:grid;place-items:center;text-align:center;font-weight:800;font-size:18px;line-height:1.1;box-shadow:0 4px 12px rgba(0,0,0,.25);transform:rotate(8deg)}
+.badge small{display:block;font-size:13px}
+.phone-box{position:relative;width:240px}
 .dl{background:#fff;margin:24px auto;max-width:760px;border-radius:18px;padding:24px 16px;text-align:center;box-shadow:0 4px 18px rgba(91,33,182,.15)}
 .btn{display:block;max-width:420px;margin:12px auto;background:linear-gradient(#22c55e,#15803d);color:#fff;text-decoration:none;font-size:24px;font-weight:700;padding:16px;border-radius:50px;box-shadow:0 5px 14px rgba(21,128,61,.4)}
 .btn small{display:block;font-size:13px;font-weight:400}
@@ -59,7 +80,10 @@ footer a{color:#ddd;margin:0 8px}
 </nav>
 
 <div class="hero" id="home">
-  <h2>एंड्रॉइड के लिए<span>PDF ऐप</span></h2>
+  <div class="title-row">
+    <h2>एंड्रॉइड के लिए<span>PDF ऐप</span></h2>
+    <img class="me" src="photo.png" alt="फोटो" width="110" height="110">
+  </div>
   <p>एक क्लिक में PDF बनाएँ, एडिट करें, जोड़ें और बाँटें।</p>
   <ul>
     <li>फोटो और टेक्स्ट से PDF बनाएँ</li>
@@ -67,6 +91,33 @@ footer a{color:#ddd;margin:0 8px}
     <li>PDF को मर्ज और स्प्लिट करें</li>
     <li>कहीं भी शेयर करें</li>
   </ul>
+</div>
+
+<div class="phone-wrap">
+  <div class="phone-box">
+    <div class="phone">
+      <div class="screen">
+        <div class="status"><span>9:41</span><span>📶 🔋</span></div>
+        <div class="appbar"><span>☰ PDF Maker</span><span>👑</span></div>
+        <div class="banner"><span>Create Your PDF<br>in Just One Click!</span><i>PDF +</i></div>
+        <div class="grid2">
+          <div><em>➕</em>Create PDF</div>
+          <div><em>📷</em>Scan PDF</div>
+          <div><em>📑</em>Merge PDF</div>
+          <div><em>✂️</em>Split PDF</div>
+        </div>
+        <div class="tools-t">PDF Tools</div>
+        <div class="tools">
+          <div><em>🗜️</em>Compress</div>
+          <div><em>✏️</em>Edit</div>
+          <div><em>🔄</em>Rotate</div>
+          <div><em>🗑️</em>Delete</div>
+        </div>
+        <div class="tabs"><b>🏠<br>Home</b><span>📁<br>My PDFs</span><span>🔧<br>Tools</span><span>⚙️<br>Settings</span></div>
+      </div>
+    </div>
+    <div class="badge"><div>100%<small>Free</small></div></div>
+  </div>
 </div>
 
 <div class="dl">
@@ -109,3 +160,4 @@ footer a{color:#ddd;margin:0 8px}
 
 </body>
 </html>
+
